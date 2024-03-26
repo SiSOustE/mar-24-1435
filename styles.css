@@ -15,15 +15,25 @@ body{
   border: 3px solid var(--border-color);
   margin: var(--cv-margin);
   height: calc(100vh - 2*var(--cv-margin));
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-rows: 1fr 4fr;
 }
 .cv-header {
   border-bottom: 3px solid var(--border-color);
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-endf;
+  display: grid;
+/*  grid-template-areas:
+    'avatar title'
+    'avatar text';
+    grid-template-columns: 120px;
+    grid-template-rows: [title] 30px [title-end];
+*/
+    grid-template: 
+      [title] 'avatar title' 30px [title-end]
+      'avatar text'
+      / 120px;
+      gap: 10px;
 }
+
 .cv-header,
 .cv-content {
   padding: var(--cv-margin);
@@ -32,15 +42,18 @@ body{
   border: 3px solid var(--border-color);
   background-color: var((--background-color));
   max-width: 120px;
-  border-radius: 10px;
+  border-radius: 0 10px;
 }
 .cv-avatar{
   width: 100%;
   border-radius: 10px;
 }
-.cv-info {
-  margin-left: var(--cv-margin);
+.cv-text {
+  grid-area: text;
 }
-.cv-content {
-  align-self: center;
+.cv-title {
+  grid-area: title;
+}
+.cv-avatar-area {
+  grid-area: avatar;
 }
