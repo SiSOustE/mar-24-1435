@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Form</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- ===================================================== -->
+    <div class="enter-container">
+
+      <form metod="post" action="/login">
+        <div>
+          <!-- login -->
+          <label> <span>Введите логин</span>
+            <input type="text" name="login" minlength="2" placeholder="enter login (min - 4)" required />
+            <!-- password -->
+          </label>
+        <label> <span>Введите пароль</span>
+          <input type="password" name="password" minlength="8" placeholder="enter password (min - 8)" required />
+        </label>
+        <!--verify password -->
+        <label> <span>Проверьте пароль</span>
+          <input type="password" name="password" placeholder="verify password" required />
+        </label>
+      </div>
+      <div>
+        <!-- e-mail -->
+        <label for="email">Enter your email
+          <input type="email" id="email" size="30" required />
+        </label>
+        <!-- language -->
+        <label for="lang">Choose a language:
+          <select name="language" id="lang">
+            <option>--choose a language--</option>
+            <option value="ru">Ru</option> <option value="en-us">En-US</option> <option value="en-gb">En-GB</option> <option value="de">De</option> <option value="fr">Fr</option> <option value="es">Es</option>
+          </select>
+        </label>
+      </div>
+      <div class="container_enter-btn">
+        <button type="submit">Войти</button>
+      </div>
+    </div>
+    
+    </form>
+    
+    <!-- ===================================================== -->
+
+    <div class="cv">
+      <header class="cv-header">
+        <div class="cv-avatar-area">
+          <div class="cv-avatar-wrapper">
+            <img
+              src="./images-29-0258/Calc-29-0300.png"
+              alt="Avatar"
+              class="cv-avatar"
+            />
+          </div>
+        </div>
+        <h3 class="cv-title">Title</h3>
+        <p class="cv-text">info</p>
+      </header>
+      <main class="cv-content">content</main>
+    </div>
+  </body>
+</html>
